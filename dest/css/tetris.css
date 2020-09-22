@@ -1,0 +1,19 @@
+div, input, label {
+  font-family: "Open Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+@keyframes kirbymove {
+  0% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-48%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+}

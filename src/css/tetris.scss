@@ -1,0 +1,53 @@
+$red: #af2d13;
+$dark_red_two: #752b42;
+$white: #ffffff;
+$black: #000000;
+$pink: #ff9db5;
+$dark_pink: #d77584;
+$dark_pink_two: #f0608b;
+$blue: #4b4796;
+$dark_blue: #2b3e5a;
+
+// breakpoint
+$breakpoints: (
+    'sm': 'screen and (max-width: 400px)',
+    'md': 'screen and (max-width: 768px)',
+    'lg': 'screen and (max-width: 1000px)',
+    'xl': 'screen and (max-width: 1200px)',
+) !default;
+
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+@mixin pseudos () {
+    content: "";
+}
+@mixin d-none () {
+    display: none;
+}
+div, input, label {
+    font-family: "Open Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+input[type="checkbox"] {
+    @include d-none;
+}
+input[type="checkbox"] + label {
+}
+#container {
+}
+
+
+@keyframes kirbymove{
+    0%{
+        transform: translateX(-50%) translateY(-50%);
+    }
+    50%{
+        transform: translateX(-50%) translateY(-48%);
+    }
+    100%{
+        transform: translateX(-50%) translateY(-50%);
+    }
+}
+
