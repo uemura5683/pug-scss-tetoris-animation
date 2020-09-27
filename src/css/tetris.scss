@@ -5,50 +5,27 @@ $yellow: #f9ff03;
 $red: #fc041a;
 $purple: #ff00fe;
 $blue: #1e80FF;
-$gray: #263238;
-$lightgray: #445a64;
+$white: #ffffff;
+$gray: #1e1e1e;
+$black: #000000;
 
-
-// breakpoint
-$breakpoints: (
-    'sm': 'screen and (max-width: 400px)',
-    'md': 'screen and (max-width: 768px)',
-    'lg': 'screen and (max-width: 1000px)',
-    'xl': 'screen and (max-width: 1200px)',
-) !default;
-
-@mixin mq($breakpoint: md) {
-    @media #{map-get($breakpoints, $breakpoint)} {
-        @content;
-    }
-}
-@mixin pseudos () {
-    content: "";
-}
-@mixin d-none () {
-    display: none;
-}
 body {
     margin: 0;
 }
-body, div, input, label {
-    font-family: "Open Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-}
-input[type="checkbox"] {
-    @include d-none;
-}
-input[type="checkbox"] + label {
-}
 #container {
     width: 480px;
-    height: auto;
+    height: 860px;
     position: relative;
     margin: 10px auto;
     label {
         position: absolute;
         display: none;
     }
-    .tetoris-content {
+    .tetoris-content {       
+        position: absolute;
+        transform: translateX(-50%) translateY(-50%);
+        top: 50%;
+        left: 50%;
         background-color: $gray;
         display: grid;
         grid-template-rows: repeat(18, 45px);
@@ -56,8 +33,18 @@ input[type="checkbox"] + label {
         grid-template-columns: repeat(10, 45px);
         -ms-grid-columns: repeat(10, 50px);
         padding: 15px;
+        animation:  vibration .2s ease-in-out 1 3.2s,
+                    vibration .2s ease-in-out 1 6.2s,
+                    vibration .2s ease-in-out 1 8.6s,
+                    vibration .2s ease-in-out 1 10.4s,
+                    vibration .2s ease-in-out 1 13.4s,
+                    vibration .2s ease-in-out 1 16.4s,
+                    vibration .2s ease-in-out 1 19s,
+                    vibration .2s ease-in-out 1 22s,
+                    vibration .2s ease-in-out 1 24.6s,
+                    vibration .2s ease-in-out 1 28.8s;
         div[class*="tetoris-content"]{
-            background-color: $lightgray;
+            background-color: $black;
             box-shadow: inset 1px 1px 0 0 $gray;
         }
         .tetoris-content__block4 {
@@ -365,132 +352,248 @@ input[type="checkbox"] + label {
             animation:  flashing_orange .2s linear 1 6.0s;
         }
         .tetoris-content__block141 {
-            animation:  end_orange 1s linear 22s forwards;
+            animation:  end_orange 1s linear 22s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block142 {
-            animation:  end_orange 1s linear 22s forwards;
+            animation:  end_orange 1s linear 22s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block143 {
-            animation:  end_orange 1s linear 22s forwards;
+            animation:  end_orange 1s linear 22s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block144 {
-            animation:  end_purple 1s linear 19s forwards;
+            animation:  end_purple 1s linear 19s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block145 {
-            animation:  end_blue 1s linear 24.6s forwards;
+            animation:  end_blue 1s linear 24.6s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block146 {
-            animation:  end_blue 1s linear 24.6s forwards;
+            animation:  end_blue 1s linear 24.6s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block147 {
-            animation:  end_blue 1s linear 24.6s forwards;
+            animation:  end_blue 1s linear 24.6s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block148 {
-            animation:  end_yellow 1s linear 16.4s forwards;
+            animation:  end_yellow 1s linear 16.4s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block149 {
-            animation:  end_yellow 1s linear 16.4s forwards;
+            animation:  end_yellow 1s linear 16.4s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block150 {
-            animation:  end_waterblue 1s linear 28.8s forwards;
+            animation:  end_waterblue 1s linear 28.8s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block151 {
-            animation:  end_orange 1s linear 22s forwards;
+            animation:  end_orange 1s linear 22s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block152 {
-            animation:  end_orange 1s linear 6.2s forwards;
+            animation:  end_orange 1s linear 6.2s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block153 {
-            animation:  end_orange 1s linear 6.2s forwards;
+            animation:  end_orange 1s linear 6.2s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block154 {
-            animation:  end_purple 1s linear 19s forwards;
+            animation:  end_purple 1s linear 19s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block155 {
-            animation:  end_purple 1s linear 19s forwards;
+            animation:  end_purple 1s linear 19s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block156 {
-            animation:  end_yellowgreen 1s linear 10.4s forwards;
+            animation:  end_yellowgreen 1s linear 10.4s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block157 {
-            animation:  end_blue 1s linear 24.6s forwards;
+            animation:  end_blue 1s linear 24.6s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block158 {
-            animation:  end_yellow 1s linear 16.4s forwards;
+            animation:  end_yellow 1s linear 16.4s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block159 {
-            animation:  end_yellow 1s linear 16.4s forwards;
+            animation:  end_yellow 1s linear 16.4s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block160 {
-            animation:  end_waterblue 1s linear 28.8s forwards;
+            animation:  end_waterblue 1s linear 28.8s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block161 {
-            animation:  end_yellow 1s linear 3.2s forwards;
+            animation:  end_yellow 1s linear 3.2s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block162 {
-            animation:  end_yellow 1s linear 3.2s forwards;
+            animation:  end_yellow 1s linear 3.2s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block163 {
-            animation:  end_orange 1s linear 6.2s forwards;
+            animation:  end_orange 1s linear 6.2s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block164 {
-            animation:  end_purple 1s linear 19s forwards;
+            animation:  end_purple 1s linear 19s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block165 {
-            animation:  end_purple 1s linear 8.6s forwards;
+            animation:  end_purple 1s linear 8.6s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block166 {
-            animation:  end_yellowgreen 1s linear 10.4s forwards;
+            animation:  end_yellowgreen 1s linear 10.4s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block167 {
-            animation:  end_yellowgreen 1s linear 10.4s forwards;
+            animation:  end_yellowgreen 1s linear 10.4s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block168 {
-            animation:  end_yellow 1s linear 13.4s forwards;
+            animation:  end_yellow 1s linear 13.4s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block169 {
-            animation:  end_yellow 1s linear 13.4s forwards;
+            animation:  end_yellow 1s linear 13.4s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block170 {
-            animation:  end_waterblue 1s linear 28.8s forwards;
+            animation:  end_waterblue 1s linear 28.8s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block171 {
-            animation:  end_yellow 1s linear 3.2s forwards;
+            animation:  end_yellow 1s linear 3.2s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block172 {
-            animation:  end_yellow 1s linear 3.2s forwards;
+            animation:  end_yellow 1s linear 3.2s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block173 {
-            animation:  end_orange 1s linear 6.2s forwards;
+            animation:  end_orange 1s linear 6.2s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block174 {
-            animation:  end_purple 1s linear 8.6s forwards;
+            animation:  end_purple 1s linear 8.6s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block175 {
-            animation:  end_purple 1s linear 8.6s forwards;
+            animation:  end_purple 1s linear 8.6s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block176 {
-            animation:  end_purple 1s linear 8.6s forwards;
+            animation:  end_purple 1s linear 8.6s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block177 {
-            animation:  end_yellowgreen 1s linear 10.4s forwards;
+            animation:  end_yellowgreen 1s linear 10.4s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block178 {
-            animation:  end_yellow 1s linear 13.4s forwards;
+            animation:  end_yellow 1s linear 13.4s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block179 {
-            animation:  end_yellow 1s linear 13.4s forwards;
+            animation:  end_yellow 1s linear 13.4s forwards,
+            flash .6s ease-in-out 1 29s,
+            end_gray 1s linear 29.6s forwards;
         }
         .tetoris-content__block180 {
-            animation:  end_waterblue 1s linear 28.8s forwards;
+            animation:  end_waterblue 1s linear 28.8s forwards,
+                        flash .6s ease-in-out 1 29s,
+                        end_gray 1s linear 29.6s forwards;
         }
     }
 }
 
+@keyframes flash {
+    0%{
+        background-color: $white;
+    }
+    20%{
+        background-color: $black;
+    }
+    40%{
+        background-color: $white;
+    }
+    60%{
+        background-color: $black;
+    }
+    80%{
+        background-color: $white;
+    }
+    100%{
+        background-color: $black;
+    }
+}
 
+        
+@keyframes vibration {
+    0%{
+        transform: translateX(-50%) translateY(-50%);
+    }
+    50%{
+        transform: translateX(-50%) translateY(-49%);
+    }
+    100%{
+        transform: translateX(-50%) translateY(-50%);
+    }    
+}
+
+@keyframes end_gray { 
+    0%   { background-color: $black; } 100% { background-color: $black; }
+}
 
 @keyframes flashing_orange { 
-    0%   { background-color: $lightgray; } 0.1%  { background-color: $orange; } 99.9%  { background-color: $orange; } 100% { background-color: $lightgray; }
+    0%   { background-color: $black; } 0.1%  { background-color: $orange; } 99.9%  { background-color: $orange; } 100% { background-color: $black; }
 }
 
 @keyframes end_orange { 
@@ -498,7 +601,7 @@ input[type="checkbox"] + label {
 }
 
 @keyframes flashing_waterblue { 
-    0%   { background-color: $lightgray; } 0.1%  { background-color: $waterblue; } 99.9%  { background-color: $waterblue; } 100% { background-color: $lightgray; }
+    0%   { background-color: $black; } 0.1%  { background-color: $waterblue; } 99.9%  { background-color: $waterblue; } 100% { background-color: $black; }
 }
 
 @keyframes end_waterblue { 
@@ -506,7 +609,7 @@ input[type="checkbox"] + label {
 }
 
 @keyframes flashing_yellowgreen { 
-    0%   { background-color: $lightgray; } 0.1%  { background-color: $yellowgreen; } 99.9%  { background-color: $yellowgreen; } 100% { background-color: $lightgray; }
+    0%   { background-color: $black; } 0.1%  { background-color: $yellowgreen; } 99.9%  { background-color: $yellowgreen; } 100% { background-color: $black; }
 }
 
 @keyframes end_yellowgreen { 
@@ -514,7 +617,7 @@ input[type="checkbox"] + label {
 }
 
 @keyframes flashing_yellow { 
-    0%   { background-color: $lightgray; } 0.1%  { background-color: $yellow; } 99.9%  { background-color: $yellow; } 100% { background-color: $lightgray; }
+    0%   { background-color: $black; } 0.1%  { background-color: $yellow; } 99.9%  { background-color: $yellow; } 100% { background-color: $black; }
 }
 
 @keyframes end_yellow { 
@@ -522,7 +625,7 @@ input[type="checkbox"] + label {
 }
 
 @keyframes flashing_red { 
-    0%   { background-color: $lightgray; } 0.1%  { background-color: $red; } 99.9%  { background-color: $red; } 100% { background-color: $lightgray; }
+    0%   { background-color: $black; } 0.1%  { background-color: $red; } 99.9%  { background-color: $red; } 100% { background-color: $black; }
 }
 
 @keyframes end_red { 
@@ -530,7 +633,7 @@ input[type="checkbox"] + label {
 }
 
 @keyframes flashing_purple { 
-    0%   { background-color: $lightgray; } 0.1%  { background-color: $purple; } 99.9%  { background-color: $purple; } 100% { background-color: $lightgray; }
+    0%   { background-color: $black; } 0.1%  { background-color: $purple; } 99.9%  { background-color: $purple; } 100% { background-color: $black; }
 }
 
 @keyframes end_purple { 
@@ -538,7 +641,7 @@ input[type="checkbox"] + label {
 }
 
 @keyframes flashing_blue { 
-    0%   { background-color: $lightgray; } 0.1%  { background-color: $blue; } 99.9%  { background-color: $blue; } 100% { background-color: $lightgray; }
+    0%   { background-color: $black; } 0.1%  { background-color: $blue; } 99.9%  { background-color: $blue; } 100% { background-color: $black; }
 }
 
 @keyframes end_blue { 
